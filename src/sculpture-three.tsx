@@ -2,7 +2,7 @@
 
 {
   /*
-  Algumas props e duvida peguei na IA por esta iniciando o estudo de react-three-fiber, 
+  Algumas props e duvidas peguei na IA por esta iniciando o estudo de react-three-fiber, 
   mas não sei se é a melhor forma de fazer, mas funciona.
   e algumas coisa ainda nao sei como funciona tambem
 */

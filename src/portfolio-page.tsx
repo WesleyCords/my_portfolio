@@ -1,10 +1,10 @@
 'use client';
 
-import { stacks, projects } from './data';
+// import { stacks, projects } from './data';
 
 import { useEffect, useRef, useState } from 'react';
-import SculptureThree from './sculpture-three';
 import dynamic from 'next/dynamic';
+import { ArrowDown, Asterisk } from 'lucide-react';
 
 const AbstractSculpture = dynamic(() => import('./sculpture-three'), {
   ssr: false,
@@ -57,7 +57,7 @@ export default function PortfolioPage() {
 
   return (
     <main>
-      <div></div>
+      <div className="scroll-progress" style={{ transform: `scaleX(${scroll})` }} />
 
       <header className="site-header">
         <a href="#being" className="brand" arial-label="Inicio">
@@ -72,6 +72,28 @@ export default function PortfolioPage() {
           <i className="dot" /> Disponível para projetos
         </span>
       </header>
+
+      <section id="being" className="hero" aria-labelledby="hero-title">
+        <AbstractSculpture scroll={Math.min(scroll * 4, 1)} />
+        <div className="hero-kicker">
+          <Asterisk aria-hidden="true" />
+          Desenvolvedor contínuo · Brasil
+        </div>
+        <h1 className="hero-title">
+          <span>EU TRANSFORMO</span>
+          <span className="outline-word">IDEIAS</span>
+          <span>EM EXPERIÊNCIAS.</span>
+        </h1>
+        <div className="hero-bottom">
+          <p>Desenvolvo produtos digitais onde código, movimento e intenção trabalham juntos.</p>
+          <a href="#projetos" className="scroll-cta">
+            <ArrowDown aria-hidden="true" /> Explore meu trabalho
+          </a>
+        </div>
+        <div className="hero-code" aria-hidden="true">
+          {'{ creativity: true,\n  boring: false }'}
+        </div>
+      </section>
     </main>
   );
 }
