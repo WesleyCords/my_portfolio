@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @theme inline {
   --font-sans: var(--font-body);
@@ -59,4 +59,71 @@ textarea {
 ::selection {
   background: var(--primary);
   color: var(--primary-foreground);
+}
+
+.site-header {
+  width: 100%;
+  height: 80px;
+  padding: 0 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 10;
+}
+.site-header nav {
+  display: flex;
+  gap: 32px;
+}
+.site-header nav a {
+  color: var(--muted-foreground);
+  transition: color 0.2s ease;
+  position: relative;
+  text-decoration: none;
+}
+.site-header nav a:hover {
+  color: var(--foreground);
+}
+.site-header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--foreground);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.site-header nav a:hover::after {
+  transform: scaleX(1);
+}
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+.availability .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--primary) 18%, transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+.brand {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+.brand span {
+  color: var(--primary);
+  margin-left: 4px;
 }
