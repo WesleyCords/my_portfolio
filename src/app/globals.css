@@ -137,3 +137,9 @@ textarea {
   color: var(--primary);
   margin-left: 4px;
 }
+
+@keyframes pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
