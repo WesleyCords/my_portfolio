@@ -86,7 +86,7 @@ export default function PortfolioPage() {
         </h1>
         <div className="hero-bottom">
           <p>Desenvolvo produtos digitais onde código, movimento e intenção trabalham juntos.</p>
-          <a href="#projetos" className="scroll-cta">
+          <a href="#projects" className="scroll-cta">
             <ArrowDown aria-hidden="true" /> Explore meu trabalho
           </a>
         </div>
