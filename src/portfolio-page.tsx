@@ -1,6 +1,6 @@
 'use client';
 
-import { projects } from './data';
+import { projects, stacks } from './data';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -156,6 +156,30 @@ export default function PortfolioPage() {
                 >
                   <ArrowUpRight aria-hidden="true" />
                 </a>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="journey section-shell" aria-labelledby="journey-title">
+        <Reveal className="section-heading journey-heading">
+          <span>02 / EM CONSTANTE EVOLUÇÃO</span>
+          <h2 id="journey-title">
+            MINHA JORNADA <br /> NÃO TEM FIM.
+          </h2>
+        </Reveal>
+        <div className="timeline">
+          {stacks.map((stack, i) => (
+            <Reveal key={i} className={`timeline-item timeline-item--${stack.status}`}>
+              <span className="timeline-number">0{i + 1}</span>
+              <div className="timeline-marker">
+                <i />
+              </div>
+              <div>
+                <span className="timeline-year">{stack.year}</span>
+                <h3>{stack.label}</h3>
+                <p>{stack.items}</p>
               </div>
             </Reveal>
           ))}

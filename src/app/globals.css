@@ -3,6 +3,7 @@
 @import 'shadcn/tailwind.css';
 @import '../styles/hero.css';
 @import '../styles/section-projects.css';
+@import '../styles/journey.css';
 
 @theme inline {
   --font-sans: var(--font-body);
