@@ -1,0 +1,153 @@
+.section-shell {
+  padding: 16vw 4vw;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: start;
+  gap: 5vw;
+  margin-bottom: 12vw;
+}
+
+.section-heading > span,
+.about-copy > span,
+.contact > div > span {
+  color: var(--primary);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 6vw, 6.2rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  margin: 0;
+}
+
+.section-heading p {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 330px;
+}
+
+.projects {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12vw;
+}
+
+.project-card {
+  border-top: 1px solid color-mix(in srgb, var(--background) 22%, transparent);
+  padding-top: 18px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: color-mix(in srgb, var(--background) 65%, transparent);
+}
+
+.project-visual {
+  height: clamp(330px, 60vw, 720px);
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-visual {
+  transform: scale(0.985);
+}
+
+.project-image {
+  object-fit: cover;
+  transition:
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.035);
+  filter: saturate(1.08);
+}
+
+.project-image-label {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  padding: 8px 10px;
+  background: var(--primary);
+  color: var(--foreground);
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.project-visual--pulso .project-image {
+  object-position: center;
+}
+.project-visual--orbita .project-image {
+  object-position: center;
+}
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr auto;
+  gap: 32px;
+  align-items: start;
+  padding-top: 24px;
+}
+
+.project-info p {
+  max-width: 520px;
+  color: color-mix(in srgb, var(--background) 65%, transparent);
+  line-height: 1.5;
+  margin: 0;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 8px;
+}
+.project-tags span {
+  border: 1px solid color-mix(in srgb, var(--background) 25%, transparent);
+  border-radius: 99px;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+.project-info > a {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--background);
+  border-radius: 50%;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.25s;
+}
+
+.project-info > a:hover {
+  background: var(--background);
+  color: var(--foreground);
+  transform: rotate(45deg);
+}

@@ -1,10 +1,10 @@
 'use client';
 
-// import { stacks, projects } from './data';
-
+import { projects } from './data';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { ArrowDown, Asterisk } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Asterisk } from 'lucide-react';
 
 const AbstractSculpture = dynamic(() => import('./sculpture-three'), {
   ssr: false,
@@ -14,6 +14,31 @@ const AbstractSculpture = dynamic(() => import('./sculpture-three'), {
     </div>
   ),
 });
+
+{
+  /* Componente para mostrar o projeto */
+}
+
+interface ProjectVisualProps {
+  type: string;
+  image: string;
+  title: string;
+}
+
+function ProjectVisual({ type, image, title }: ProjectVisualProps) {
+  return (
+    <div className={`project-visual project-visual--${type}`}>
+      <Image
+        src={image}
+        alt={`Print do projeto ${title}`}
+        fill
+        sizes="(max-width: 800px) 90vw, 92vw"
+        className="project-image"
+      />
+      <span className="project-image-label">CASO DE ESTUDO / {type.toUpperCase()}</span>
+    </div>
+  );
+}
 
 {
   /*Wrapper pra observar a posição dos elementos na tela */
@@ -94,6 +119,54 @@ export default function PortfolioPage() {
           {'{ creativity: true,\n  boring: false }'}
         </div>
       </section>
+
+      <section id="projects" className="projects section-shell" aria-labelledby="projects-title">
+        <Reveal className="section-heading">
+          <span>01 / TRABALHOS SELECIONADOS</span>
+          <h2 id="projects-title">
+            PROJETOS QUE
+            <br />
+            FALAM POR MIM.
+          </h2>
+          <p>Uma seleção de experiências digitais pensadas do primeiro pixel à última interação.</p>
+        </Reveal>
+        <div className="project-list">
+          {projects.map((project, index) => (
+            <Reveal key={index} className="project-card">
+              <div className="project-meta">
+                <span>{index + 1}</span>
+                <span>{project.type}</span>
+              </div>
+              <ProjectVisual type={project.visual} image={project.image} title={project.title} />
+              <div className="project-info">
+                <div>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+                <div className="project-tags">
+                  {project.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Olhar o repositório do projeto:  ${project.title}`}
+                >
+                  <ArrowUpRight aria-hidden="true" />
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 WESLEY CORDEIRO</span>
+        <span>FEITO COM CÓDIGO + CURIOSIDADE</span>
+        <a href="#being">VOLTAR AO TOPO ↑</a>
+      </footer>
     </main>
   );
 }

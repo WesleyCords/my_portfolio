@@ -2,6 +2,7 @@
 @plugin 'tailwindcss-animate';
 @import 'shadcn/tailwind.css';
 @import '../styles/hero.css';
+@import '../styles/section-projects.css';
 
 @theme inline {
   --font-sans: var(--font-body);
@@ -142,4 +143,15 @@ textarea {
   50% {
     opacity: 0.55;
   }
+}
+
+footer {
+  min-height: 100px;
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted-foreground);
 }

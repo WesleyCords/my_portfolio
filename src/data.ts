@@ -6,6 +6,8 @@ export const projects = [
       'Uma plataforma de colaboração que transforma fluxos complexos em decisões simples e visíveis.',
     tags: ['Next.js', 'TypeScript', 'PostgreSQL'],
     visual: 'nexus',
+    image: '/nexus.png',
+    link: 'https://github.com/wesleycordeiro/nexus',
   },
   {
     title: 'PULSO',
@@ -14,6 +16,8 @@ export const projects = [
       'Dados em tempo real traduzidos em uma interface rápida, humana e impossível de ignorar.',
     tags: ['React', 'Node.js', 'WebSockets'],
     visual: 'pulso',
+    image: '/pulso.png',
+    link: 'https://github.com/wesleycordeiro/pulso',
   },
   {
     title: 'ORBITA',
@@ -22,6 +26,8 @@ export const projects = [
       'Uma experiência financeira direta ao ponto, criada para colocar clareza antes de complexidade.',
     tags: ['React Native', 'API REST', 'Figma'],
     visual: 'orbita',
+    image: '/orbita.png',
+    link: 'https://github.com/wesleycordeiro/orbita',
   },
 ];
 
