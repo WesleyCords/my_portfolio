@@ -189,7 +189,7 @@ export default function PortfolioPage() {
       <section id="about" className="about section-shell" aria-labelledby="about-title">
         <Reveal className="about-image">
           <Image
-            src="/aleatory-dev.png"
+            src="/my-litle-photo.jpeg"
             alt="Minha fotinha"
             fill
             sizes="(max-width: 768px) 100vw, 42vw"
