@@ -4,7 +4,7 @@ import { projects, stacks } from './data';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { ArrowDown, ArrowUpRight, Asterisk } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Asterisk, MapPin } from 'lucide-react';
 
 const AbstractSculpture = dynamic(() => import('./sculpture-three'), {
   ssr: false,
@@ -184,6 +184,42 @@ export default function PortfolioPage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section id="about" className="about section-shell" aria-labelledby="about-title">
+        <Reveal className="about-image">
+          <Image
+            src="/aleatory-dev.png"
+            alt="Minha fotinha"
+            fill
+            sizes="(max-width: 768px) 100vw, 42vw"
+          />
+          <span>ESTUDANTE DE SISTEMAS DE INFORMAÇÃO - UFRPE · {new Date().getFullYear()}</span>
+        </Reveal>
+        <Reveal className="about-copy">
+          <span>03 / QUEM ESTÁ POR TRÁS</span>
+          <h2 id="about-title">
+            CURIOSO POR
+            <br />
+            NATUREZA.
+            <br />
+            <em>DEV</em> POR ESCOLHA.
+          </h2>
+          <p>
+            Sou um desenvolvedor apaixonado por transformar problemas complexos em experiências
+            simples, rápidas e memoráveis.
+          </p>
+          <p>
+            Quando não estou escrevendo código, estou estudando novas tecnologias, desmontando
+            interfaces para entender como funcionam ou rabiscando a próxima ideia.
+          </p>
+          <div className="about-details">
+            <span>
+              <MapPin aria-hidden="true" /> Brasil
+            </span>
+            <span>PT & EN</span>
+          </div>
+        </Reveal>
       </section>
 
       <footer>
