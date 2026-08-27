@@ -4,7 +4,7 @@ export const projects = [
     type: 'Produto digital',
     description:
       'Um projeto feito a medida em um bootcamp. Um simples sistema para alocar e gerenciar salas de reunião presencial.',
-    tags: ['NodeJS', 'JavaScript', 'PostgreSQL', 'Express', 'React'],
+    tags: ['NodeJS', 'JavaScript', 'PostgreSQL', 'Express', 'React', 'JWT'],
     visual: 'Login',
     image: '/bootcamp.png',
     link: 'https://gerenciamento-de-salas-eta.vercel.app',
@@ -15,9 +15,9 @@ export const projects = [
     type: 'Produto digital',
     description:
       'Dados em tempo real traduzidos em uma interface rápida, humana e impossível de ignorar. Um sistema intermediario para um e-commerce',
-    tags: ['NextJS', 'Docker', 'Shadcn', 'Prisma', 'TypeScript'],
-    visual: 'pulso',
-    image: '/pulso.png',
+    tags: ['NextJS', 'Docker', 'Shadcn', 'Prisma', 'TypeScript', 'Cookies'],
+    visual: 'Overview',
+    image: '/dashboard.png',
     link: 'https://invetory-management-system-delta.vercel.app/',
     linkRepo: 'https://github.com/WesleyCords/invetory_management_system.git',
   },
