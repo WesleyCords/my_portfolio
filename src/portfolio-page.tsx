@@ -4,7 +4,7 @@ import { projects, stacks } from './data';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { ArrowDown, ArrowUpRight, Asterisk, MapPin } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Asterisk, Mail, MapPin } from 'lucide-react';
 
 const AbstractSculpture = dynamic(() => import('./sculpture-three'), {
   ssr: false,
@@ -192,6 +192,7 @@ export default function PortfolioPage() {
             src="/my-litle-photo.jpeg"
             alt="Minha fotinha"
             fill
+            loading="eager"
             sizes="(max-width: 768px) 100vw, 42vw"
           />
           <span>ESTUDANTE DE SISTEMAS DE INFORMAÇÃO - UFRPE · {new Date().getFullYear()}</span>
@@ -222,8 +223,37 @@ export default function PortfolioPage() {
         </Reveal>
       </section>
 
+      <section id="contact" className="contact section-shell" aria-labelledby="contact-title">
+        <Reveal>
+          <span>04 / VAMOS CONVERSAR</span>
+          <h2 id="contact-title">
+            TEM UMA IDEIA?
+            <br />
+            <span>ME CONTA.</span>
+          </h2>
+          <a href="mailto:wesley.cordeiro1@icloud.com" className="email-link">
+            <Mail aria-hidden="true" /> wesley.cordeiro1@icloud.com{' '}
+            <ArrowUpRight aria-hidden="true" />
+          </a>
+        </Reveal>
+        <Reveal className="contact-side">
+          <p>Estou aberto a freelas, oportunidades e boas conversas sobre tecnologia e design.</p>
+          <div>
+            <a href="https://www.linkedin.com/in/wesley-cordeiro-dev/" target="_blank">
+              LinkedIn
+            </a>
+            <a href="https://github.com/WesleyCords" target="_blank">
+              GitHub
+            </a>
+            <a href="https://instagram.com/wesleycords" target="_blank">
+              Instagram
+            </a>
+          </div>
+        </Reveal>
+      </section>
+
       <footer>
-        <span>© 2026 WESLEY CORDEIRO</span>
+        <span>© {new Date().getFullYear()} WESLEY CORDEIRO</span>
         <span>FEITO COM CÓDIGO + CURIOSIDADE</span>
         <a href="#being">VOLTAR AO TOPO ↑</a>
       </footer>

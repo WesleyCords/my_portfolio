@@ -5,6 +5,7 @@
 @import '../styles/section-projects.css';
 @import '../styles/journey.css';
 @import '../styles/about.css';
+@import '../styles/contact.css';
 
 @theme inline {
   --font-sans: var(--font-body);
