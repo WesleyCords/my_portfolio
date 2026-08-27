@@ -4,7 +4,7 @@ import { projects, stacks } from './data';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { ArrowDown, ArrowUpRight, Asterisk, Mail, MapPin } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Asterisk, CodeXml, Mail, MapPin } from 'lucide-react';
 
 const AbstractSculpture = dynamic(() => import('./sculpture-three'), {
   ssr: false,
@@ -148,14 +148,26 @@ export default function PortfolioPage() {
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Olhar o repositório do projeto:  ${project.title}`}
-                >
-                  <ArrowUpRight aria-hidden="true" />
-                </a>
+                <nav className="project-links" aria-label={`Links do projeto: ${project.title}`}>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Testar o projeto:  ${project.title}`}
+                    >
+                      <ArrowUpRight aria-hidden="true" />
+                    </a>
+                  )}
+                  <a
+                    href={project.linkRepo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Olhar o repositório do projeto:  ${project.title}`}
+                  >
+                    <CodeXml />
+                  </a>
+                </nav>
               </div>
             </Reveal>
           ))}
