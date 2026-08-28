@@ -322,3 +322,18 @@ footer {
     gap: 15px;
   }
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    h1 {
+      span:nth-child(2) {
+        align-self: flex-start;
+      }
+    }
+    font-size: 13.5vw;
+  }
+
+  .hero-sculpture {
+    inset: 4% -45% 12% 14%;
+  }
+}
