@@ -250,7 +250,7 @@ export default function PortfolioPage() {
         </Reveal>
         <Reveal className="contact-side">
           <p>Estou aberto a freelas, oportunidades e boas conversas sobre tecnologia e design.</p>
-          <div>
+          <nav>
             <a href="https://www.linkedin.com/in/wesley-cordeiro-dev/" target="_blank">
               LinkedIn
             </a>
@@ -260,7 +260,7 @@ export default function PortfolioPage() {
             <a href="https://instagram.com/wesleycords" target="_blank">
               Instagram
             </a>
-          </div>
+          </nav>
         </Reveal>
       </section>
 

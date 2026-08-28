@@ -170,3 +170,155 @@ footer {
   letter-spacing: 0.08em;
   color: var(--muted-foreground);
 }
+
+@media (max-width: 800px) {
+  .site-header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: 86px;
+
+    nav {
+      display: none;
+    }
+
+    .brand {
+      > span {
+        display: none;
+      }
+    }
+  }
+
+  .availability {
+    font-size: 10px;
+  }
+
+  .hero {
+    min-height: calc(100svh - 68px);
+    padding-top: 50px;
+
+    h1 {
+      font-size: 11.7vw;
+      line-height: 0.9;
+      text-shadow: 0 2px 24px var(--background);
+
+      span:nth-child(2) {
+        align-self: flex-start;
+        padding: 0;
+      }
+    }
+  }
+
+  .hero-sculpture {
+    inset: 4% -35% 12% 14%;
+    opacity: 0.74;
+  }
+
+  .hero-sculpture-fallback {
+    inset: 27% 18%;
+  }
+
+  .hero-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-code {
+    display: none;
+  }
+
+  .section-shell {
+    padding: 12vh 5vw;
+
+    span,
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .section-heading > p {
+    text-align: center;
+  }
+  .section-heading,
+  .journey-heading {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 8vh;
+  }
+
+  .project-list {
+    gap: 9vh;
+  }
+
+  .project-visual {
+    height: 62vh;
+    min-height: 390px;
+  }
+
+  .project-image-label {
+    left: 16px;
+    bottom: 16px;
+    font-size: 10px;
+  }
+
+  .project-info {
+    grid-template-columns: 1fr auto;
+  }
+
+  .project-tags {
+    grid-column: 1;
+  }
+
+  .project-info > a {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .timeline-item {
+    grid-template-columns: 38px 32px 1fr;
+    min-height: 160px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 9vh;
+  }
+
+  .about-details {
+    justify-content: center;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 12vh;
+    min-height: 100svh;
+
+    span {
+      text-align: center;
+      display: block;
+    }
+  }
+
+  .email-link {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-side {
+    nav {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  footer {
+    padding: 28px 5vw;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+}
