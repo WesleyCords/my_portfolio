@@ -152,6 +152,7 @@ export default function PortfolioPage() {
                   {project.link && (
                     <a
                       href={project.link}
+                      className="project-link-visit"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Testar o projeto:  ${project.title}`}
